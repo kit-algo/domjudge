@@ -75,10 +75,9 @@ Creating a chroot environment
 The judgedaemon compiles and executes submissions inside a chroot
 environment for security reasons. By default it mounts parts of a
 prebuilt chroot tree read-only during this judging process (using
-the script ``lib/judge/chroot-startstop.sh``). This is needed to
-support languages that require access to interpreters or support
-libraries at runtime, for example Java, C#, and any interpreted
-languages like Python, Perl, Shell script, etc.
+the script ``lib/judge/chroot-startstop.sh``). The chroot needs
+to contain the compilers, interpreters and support libraries that
+are needed at compile- and at runtime for the supported languages.
 
 This chroot tree can be built using the script
 ``bin/dj_make_chroot``. On Debian and Ubuntu the same
